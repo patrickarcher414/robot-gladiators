@@ -44,8 +44,8 @@ var fight = function(enemyName) {
     // check enemy's health
     if (enemyHealth <= 0) {
       window.alert(enemyName + " has died!");
-
       // award player money for winning
+      window.alert("You've won 20 Money");
       playerMoney = playerMoney + 20;
       console.log("Money:", playerMoney);
       break;
@@ -71,7 +71,10 @@ var fight = function(enemyName) {
      
 // run fight function to start game
 for(var i = 0; i < enemyNames.length; i++) {
-    var pickedEnemyName = enemyNames[i];
-    enemyHealth= 50;
-    fight(pickedEnemyName);
+    if (playerHealth > 0) {
+      window.alert("Welcome to Robot Gladiators! Round # " + ( i + 1) );
+      var pickedEnemyName = enemyNames[i];
+      enemyHealth= 50;
+      fight(pickedEnemyName);
+    }
 };
