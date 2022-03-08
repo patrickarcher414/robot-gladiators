@@ -61,7 +61,7 @@ var fight = function(enemyName) {
 
     // check player's health
     if (playerHealth <= 0) {
-      window.alert(playerName + " has died!");
+      window.alert("Your robot is destroyed! Game Over.");
       break;
     } else {
       window.alert(playerName + " still has " + playerHealth + " health left.");
