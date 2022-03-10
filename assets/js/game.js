@@ -7,10 +7,15 @@ var playerMoney = 10;
 // You can also log multiple values at once like this
 console.log("Name:", playerName, "Attack:", playerAttack, "Health:", playerHealth, "Money:", playerMoney);
 
+// function to genrate random number
+var randNum = function(min, max) {
+  var value = Math.floor(Math.random() * (max - min + 1) + min);
+  return value;
+};
 const enemyNames = ["Roborto" ,"Amy Android" ,"Robo Trumble"];
 console.log(enemyNames);
-var enemyHealth = 50;
-var enemyAttack = 12;
+var enemyAttack = randNum(10, 14);
+
 
 // fight function
 var fight = function(enemyName) {
@@ -122,11 +127,6 @@ var shop = function() {
   }
 };
 
-// function to genrate random number
-var randNum = function(min, max) {
-  var value = Math.floor(Math.random() * (max - min + 1) + min);
-  return value;
-};
 
 // function to start game
 var startGame = function() {
